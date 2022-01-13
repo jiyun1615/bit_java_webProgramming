@@ -7,3 +7,4 @@ solid 직선
 method="get/post"
 get 방식(중요한 데이터 전달x, 제한된 길이 url)
 post 방식(암호화, 사이즈 제한x)
+w3schools.com
