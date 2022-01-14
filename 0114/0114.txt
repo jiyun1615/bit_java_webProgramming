@@ -1,0 +1,20 @@
+//한글 깨짐 현상 해결법
+request.setCharacterEncoding("UTF-8");
+response.setContentType("text/html; charset = UTF-8");
+//서버에서 한글 깨짐 현상 수정 
+<Connector UREIEncoding = "UTF-8" connectionTimeout="20000" port="8080" protocol="HTTP/1.1" redirectPort="8443"/>
+
+페이지 주소->get방식 입력값 전부 나옴 
+http://localhost:8080/jsp-study/Servlet?id=gggg&age=12&fruit=kkk
+
+유효성 검사 -> 공란, 입력타입 오류 체크
+
+URL Mapping 실제 클래스 명 대신 문자열 사용
+
+web-study-02->컨텍스트 패스 (프로젝트명)
+/hello ->서블릿 요청 url 패턴 
+
+
+
+
+
