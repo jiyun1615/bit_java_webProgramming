@@ -1,0 +1,25 @@
+//DDL(정의어)
+
+create table friend(
+no number(4), 
+name char(10),
+year date,
+history varchar2(20)
+);
+
+drop table friend;
+
+//DML(조작어)
+1)조회-select문
+select no, name, year, history
+from friend;
+
+select * from friend;
+
+2)데이터 삽입-insert문
+insert into friend(no, name, year) values (1,'kimjin', '2000-01-18');
+insert into friend values(2,'홍길동','2022-01-12','bit-jsp');
+
+3)테이블 수정 - alter문
+alter table friend
+modify history varchar(42);
