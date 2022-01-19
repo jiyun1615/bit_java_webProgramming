@@ -1,0 +1,33 @@
+DDL(정의어)
+create table
+drop table
+
+alter table 테이블명 
+1. add
+2. modify
+3. drop column
+
+//스키마를 수정하기
+alter table friend
+modify history vachar(42);
+
+
+//스키마를 칼럼 추가하기
+alter table friend
+add hp char(15) default '010-000-0000';
+
+
+//정렬
+select * from friend order by name asc; 
+select * from friend order by name desc; 역순
+
+//만들어 놓은 컬럼 삭제
+alter table friend drop column 컬럼명;
+
+//저자가 만들어 놓은 서버 테이블 가져오기
+alter user hr account unlock identified by hr;
+grant dba to hr;
+connect hr/hr
+
+//테이블의 row 갯수 확인
+select count(*) from employees;
