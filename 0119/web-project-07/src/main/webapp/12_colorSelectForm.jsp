@@ -23,6 +23,7 @@ span {
 </style>
 </head>
 <body>
+쿼리로 값 받음 c:if 문 사용
 	<div>
 		<p>a<span>Hello</span> Nice to meet you</p>
 		<p>b<span style="color: blue"> color </span> changing</p>
