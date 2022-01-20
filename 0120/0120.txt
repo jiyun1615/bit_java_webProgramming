@@ -1,0 +1,132 @@
+//자바 디비 연동 과정
+
+1. 로드
+class 
+2. DB 연결 id/pw
+3. 질의
+4. 자원 반환
+
+//공인 서버 접속
+conn hr/hr
+
+//테이블 보기 사이즈 변경
+set linesize 200
+
+
+//sql- 컬럼 추가
+alter table friend
+add admin char(1) default '1';
+
+//컬럼 삭제
+alter table friend
+drop column 컬럼명;
+
+select * from friend;
+select * from friend order by name;
+select * from friend 
+
+//제대로 명령을 실행하게 하는 명령
+commit; //반영 느릴때
+rollback; //이전 명령 실행, 단, commit된 상태에서는 적용안됨
+
+//같은 테이블 복사
+create table 새테이블명 as select * from 복사할테이블명
+
+//새 테이블 생성 with 조건
+create table empmgr as select * from employees
+where 컬럼명 = '컬럼명에 속한 값';
+
+
+//테이블 명 바꾸기
+rename 전테이블명 to 새테이블명;
+
+
+//테이블 생성 및 특정 문자로 시작하는 값을 가진 객체만 뽑음
+create table empac as select *from emp
+where jov_id like 'AC%';
+
+
+//조건문
+select first_name, last_name, salary
+from emp where salary>10000;
+
+//특정 컬럼 값이 있는 애들 수 출력
+select count(commission_pct) from emp;
+
+
+//조건이 null인 값들중에서도 선택된 column 값만 출력
+select last_name, salary, commission_pct from emp
+where commission_pct is null;
+
+//int형 특정 범위 출력
+select salary from emp
+where salary between 5000 and 9000;
+where salary >=9000 and salary <11000;
+
+
+//최대 최소 평균 값 출력
+select max(salary), min(salary), avg(salary) from 테이블명;
+
+
+//그룹을 지어서 보고싶을때
+select job_id,  max(salary), min(salary), avg(salary) 
+from emp group by job_id;
+
+select job_id, count(job_id), max(salary), min(salary), avg(salary)
+from emp group by job_id order by max(salary) desc;
+
+//group에서 조건은 having
+select job_id, count(job_id), max(salary), min(salary), avg(salary)
+from emp group by job_id 
+having avg(salary)>10000
+order by max(salary) desc;
+
+//원하는 값들 뽑아서 테이블로 만들기
+create table empgroup
+  2  as
+  3  select job_id, count(job_id) 갯수, max(salary) 최고, min(salary) 최저, avg(salary) 평균
+  4  from emp
+  5  group by job_id
+  6  having avg(salary) >10000
+  7  order by max(salary) desc;
+
+
+//값 수정하기
+update friend
+set admin = '1'
+where no = '2';
+
+insert into friend values(3,'dodo','2018-03-01', 'bit computer friend', '0');
+
+
+//레코드 삭제하기
+delete from friend
+where no = '3';
+
+//사용자 만들기 - DDL(정의어)
+create user scott identified by 'tiger';
+grant connect to scott;	//유저에게 권한주기
+connect 유저이름/비번
+
+//sequence 순서 만들기
+create sequence seq1
+start with 10;	//10부터 시작
+
+//currval 지금 값
+select seq1.currval from dual;
+select seq1.nextval from dual;
+
+insert into friend(no, name) values (seq1.nextval, 'ruru');
+//이렇게 입력하면 no가 10 다음값인 11부터 값이 증가하면서 입력됨.
+
+
+create table member ( 
+name varchar2(10), 
+userid varchar2(10),
+pwd varchar2(10),
+email varchar2(20),
+phone char(13),
+admin number(1) default 0,
+primary key(userid)
+);
+
