@@ -15,6 +15,7 @@ modify history vachar(42);
 //스키마를 칼럼 추가하기
 alter table friend
 add hp char(15) default '010-000-0000';
+add admin char(1) default '1';
 
 
 //정렬
