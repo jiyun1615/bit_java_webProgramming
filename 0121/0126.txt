@@ -1,0 +1,22 @@
+create table board(
+bid number(4) primary key,
+bname varchar2(10),
+btitle varchar2(20),
+bcontent varchar2(20),
+bdate date default sysdate,
+bhit number(4),
+bgroup number(4),
+bstep number(4),
+bindent number(4)
+);
+
+create sequence board_seq
+start with 1
+increment by 1;
+
+
+select board_seq.nextval from dual;
+
+
+insert into board(bid, bname, btitle, bcontent, bgroup, bstep, bindent) 
+values (board_seq.nextval, 'test', 'title', 'content',board_seq.currval,0,0);
