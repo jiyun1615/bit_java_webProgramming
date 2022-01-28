@@ -1,0 +1,64 @@
+package com.test.di01;
+
+class GetSum {
+	private int aa;
+	private int bb;
+
+	public int getAa() {
+		return aa;
+	}
+
+	public void setAa(int aa) {
+		this.aa = aa;
+	}
+
+	public int getBb() {
+		return bb;
+	}
+
+	public void setBb(int bb) {
+		this.bb = bb;
+	}
+
+	public void sum(int aa, int bb) {
+		System.out.println("더하기");
+		int result = aa + bb;
+		System.out.println("합 :" + result);
+	}
+
+}
+
+public class MyGetSum {
+	GetSum getsum;
+	private int a;
+	private int b;
+
+	public MyGetSum() { // 인자없는 디폴트 생성자를 만든다. 스프링 권장사항
+
+	}
+
+	public void sum() {
+		getsum.sum(a, b);
+	}
+
+	public void setGetsum(GetSum getsum) {
+		this.getsum = getsum;
+	}
+
+	public void setA(int a) {
+		this.a = a;
+	}
+
+	public void setB(int b) {
+		this.b = b;
+	}
+
+	public int getA() {
+		return a;
+	}
+
+	public int getB() {
+		return b;
+	}
+
+}

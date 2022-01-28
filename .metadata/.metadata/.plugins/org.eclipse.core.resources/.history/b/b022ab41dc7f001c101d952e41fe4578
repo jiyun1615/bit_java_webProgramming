@@ -1,0 +1,13 @@
+package com.test.di01;
+
+public class GetMain {
+
+	public static void main(String[] args) {
+		MyGetSum my = new MyGetSum ();
+		my.setGetsum(new GetSum());
+		my.setA(30);
+		my.setB(33);
+		
+	}
+
+}

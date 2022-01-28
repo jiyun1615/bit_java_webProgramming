@@ -1,0 +1,7 @@
+package com.test.di03;
+
+public class examMain {
+	public void main(String[] args) {
+		
+	}
+}

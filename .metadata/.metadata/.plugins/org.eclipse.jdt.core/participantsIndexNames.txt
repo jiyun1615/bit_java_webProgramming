@@ -1,0 +1,25 @@
+INDEX VERSION 1.131
+C:\javaPractice\.metadata\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\874091921.index
+\zz\src\main\java
+C:\javaPractice\.metadata\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\829096518.index
+\mvc1_Student\src\main\java
+C:\javaPractice\.metadata\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1749026533.index
+\examples\src\main\java
+C:\javaPractice\.metadata\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\807409450.index
+\web-project-07\src\main\java
+C:\javaPractice\.metadata\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4282397191.index
+\MVC2_pattern\src\main\java
+C:\javaPractice\.metadata\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2788592961.index
+\mvc1_Student\src\main\java
+C:\javaPractice\.metadata\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1673153710.index
+\web-project-04\src\main\java
+C:\javaPractice\.metadata\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2983352595.index
+\web-study-03\src\main\java
+C:\javaPractice\.metadata\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1968344473.index
+\web-project-08\src\main\java
+C:\javaPractice\.metadata\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\470312027.index
+\bean6\src\main\java
+C:\javaPractice\.metadata\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\639110424.index
+\web-project-08\src\main\java
+C:\javaPractice\.metadata\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\631080351.index
+\Spring0\src\main\java

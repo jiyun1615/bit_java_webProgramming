@@ -1,0 +1,21 @@
+package com.test.ex.cmd;
+
+import java.util.ArrayList;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import com.test.ex.dao.Bdao;
+
+public class BListCommand implements BCommand {
+
+	@Override
+	public void execute(HttpServletRequest request, HttpServletResponse response) {
+		Bdao dao = new Bdao();
+		ArrayList<Bdto> bdtos = dao.list();
+		request.setAttribute("list", dtos);
+		
+		
+	}
+
+}

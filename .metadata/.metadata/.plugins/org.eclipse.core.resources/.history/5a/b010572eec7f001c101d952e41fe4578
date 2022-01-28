@@ -1,0 +1,14 @@
+package com.test.di03;
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+public class ee {
+	public void main(String[] args) {
+		AbstractApplicationContext ctx = new GenericXmlApplicationContext("classpath:exam.xml");
+		Exam exam1 = ctx.getBean("exam", Exam.class);
+		
+		exam1.outputMsg();
+		
+	}
+}

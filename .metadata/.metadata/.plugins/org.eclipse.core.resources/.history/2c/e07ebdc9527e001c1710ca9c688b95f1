@@ -1,0 +1,13 @@
+package com.test.ex.dao;
+
+import java.sql.*;
+import java.util.*;
+
+public class Bdao {
+	Connection dbconn;
+	PreparedStatement pstmt;
+	ResultSet rs;
+	String url = "jdbc:oracle:thin:@localhost:1521.XE";
+	String uid = "system";
+	String pwd = "1234";
+}

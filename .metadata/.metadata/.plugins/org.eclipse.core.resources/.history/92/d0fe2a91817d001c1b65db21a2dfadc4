@@ -1,0 +1,32 @@
+package com.test.ex;
+
+import java.sql.*;
+
+public class StudentDAO {
+	//멤버변수
+	Connection conn;
+	PreparedStatement ps;
+	ResultSet rs;
+	String url = "jdbc:oracle:thin:@localhost:1522:XE";
+	String uid = "system";
+	String upw = "1234";
+	public StudentDAO() {
+		super();
+		try {
+			//1. 드라이버 찾아 연결
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			conn = DriverManager.getConnection(url, uid, upw);
+			System.out.println("데이터 연결 성공");
+		}catch(Exception e) {}
+	}//생성자
+	public int insertStudent(StudentDTO sdto) throws SQLException{
+		String no = sdto.getNo();
+		String pw = sdto.getPw();
+		String name = sdto.getName();
+		String hp = sdto.getHp();
+		
+		return 0;
+	}//insertStudent()
+
+	
+}
